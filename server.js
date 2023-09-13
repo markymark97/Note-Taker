@@ -6,7 +6,7 @@ const path = require('path');
 const fs = require ('fs');
 
 const { v4: uuidv4 } = require('uuid'); //creates ID
-const PORT =  3001;
+const PORT = process.env.PORT||  3001; //process.env.PORT for deployment
 const app = express();
 app.use(express.json());
 app.use(express.static('public'));
